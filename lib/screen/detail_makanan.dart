@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kuis/model/food_list.dart';
+import 'package:kuis/screen/checkout.dart';
 
 class DetaiLMakanan extends StatefulWidget {
   final Food data;
@@ -127,7 +128,12 @@ class _DetaiLMakananState extends State<DetaiLMakanan> {
                                 style: ElevatedButton.styleFrom(
                                     backgroundColor: Colors.blueAccent,
                                     foregroundColor: Colors.white),
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.of(context).pushReplacement(
+                                      MaterialPageRoute(
+                                          builder: (context) => Checkout(
+                                              total_harga: total_harga)));
+                                },
                                 child: Text(
                                   "Checkout",
                                   style: TextStyle(
