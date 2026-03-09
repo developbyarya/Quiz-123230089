@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kuis/screen/home.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -114,7 +115,10 @@ class _LoginScreenState extends State<LoginScreen> {
         backgroundColor: Colors.green,
       ));
 
-      Navigator.of(context).pushReplacementNamed("/");
+      Navigator.of(context).pushReplacement(MaterialPageRoute(
+          builder: (context) => HomePage(
+                username: _usernameController.text,
+              )));
 
       return;
     } else {

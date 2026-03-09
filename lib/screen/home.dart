@@ -3,14 +3,15 @@ import 'package:kuis/model/food_list.dart';
 import 'package:kuis/screen/detail_makanan.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  final String username;
+  const HomePage({super.key, required this.username});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         leading: null,
-        title: Text("Makanan Enak | 123230089"),
+        title: Text("Makanan Enak | 123230$username"),
       ),
       body: ListView.builder(
         itemBuilder: (context, item) {

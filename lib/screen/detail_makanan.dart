@@ -21,7 +21,7 @@ class _DetaiLMakananState extends State<DetaiLMakanan> {
         appBar: AppBar(
           title: Text(widget.data.name),
         ),
-        body: Column(
+        body: ListView(
           children: [
             SizedBox(
               width: 300,
